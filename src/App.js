@@ -9,7 +9,8 @@ import Courses from "./routes/Courses/Courses";
 function App() {
     return (
         <Routes>
-            <Route path="/" element={<General/>}/>
+
+            <Route exact path="/" element={<General/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/shop" element={<Shop/>}/>
             <Route path="/courses" element={<Courses/>}/>

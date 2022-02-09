@@ -1,0 +1,17 @@
+@import "./variable.module";
+
+
+.main {
+  display: flex;
+  height: 100vh;
+
+
+ &__navigition {
+    width: 15%;
+    background-color: $color;
+  }
+
+ &__content {
+    width: 85%;
+  }
+}
