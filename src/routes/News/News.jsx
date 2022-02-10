@@ -3,6 +3,7 @@ import classes from "../../style.module.scss";
 import Navbar from "../../modules/Navigation/Navbar";
 import Header from "../../modules/Navigation/Header";
 import ContextData from "../../context/Data/ContextData";
+import NewItem from "./modules/NewItem";
 
 const News = () => {
 
@@ -39,12 +40,7 @@ const News = () => {
                 <Header/>
                 {news.map((elem,index)=>{
                     return(
-                        <div key={index}>
-                            <div>{elem.title}</div>
-                            <div>{elem.description}</div>
-                            <div>{elem.category}</div>
-                            <div><img src={elem.image} alt=""/></div>
-                        </div>
+                        <NewItem data={elem} key={index} />
                     )
                 })}
             </div>

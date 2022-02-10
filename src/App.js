@@ -12,8 +12,8 @@ import StateData from "./context/Data/StateData";
 function App() {
 
     const [stateData, dispatchData] = React.useReducer(ReducerData, StateData);
-    return (
 
+    return (
 
         <ContextData.Provider value={{stateData, dispatchData}}>
 
