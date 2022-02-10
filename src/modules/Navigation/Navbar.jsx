@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 import classes from "./navigation.module.scss";
 
-const Navbar = () => {
+const NavBar = () => {
 
     return (
         <div className={classes.navigation}>
@@ -16,4 +16,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default NavBar;

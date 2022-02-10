@@ -10,6 +10,7 @@ const Shop = () => {
         <div className={classes.main}>
             <div className={classes.main__navigition}><Navbar/></div>
             <div className={classes.main__content}>
+                <Header/>
                SHOP
             </div>
         </div>
