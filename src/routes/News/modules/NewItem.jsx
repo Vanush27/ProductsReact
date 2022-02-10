@@ -11,11 +11,11 @@ const NewItem = (
     return (
         <div className={classes.news}>
             <Image sizeWidth="40%">
-                <img src={data.image} alt="image"/>
+                <img src={data.img} alt="image"/>
             </Image>
             <div className={classes.news__body}>
                 <Title>{data.title}</Title>
-                <TextCenter>{data.description}</TextCenter>
+                <TextCenter>{data.subtitle}</TextCenter>
 
             </div>
 

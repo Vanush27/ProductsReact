@@ -1,9 +1,8 @@
 import React from "react";
-import classes from "../../style.module.scss";
-import Navbar from "../../modules/Navigation/Navbar";
-import Header from "../../modules/Navigation/Header";
 import ContextData from "../../context/Data/ContextData";
 import NewItem from "./modules/NewItem";
+import NET from "../../network";
+import Office from "../../layuots/office/Office";
 
 const News = () => {
 
@@ -15,12 +14,12 @@ const News = () => {
         const fetchNews = async () => {
 
             try {
-                const response = await fetch("http://localhost:3004/news");
+                const response = await fetch(`${NET.APP_URL}/news`);
                 if (response.status === 200) {
                     const result = await response.json();
                     dispatchData({
-                        type : "FETCH_NEWS",
-                        payload : result
+                        type: "FETCH_NEWS",
+                        payload: result
                     })
                 }
             } catch (e) {
@@ -34,17 +33,14 @@ const News = () => {
 
     return (
 
-        <div className={classes.main}>
-            <div className={classes.main__navigition}><Navbar/></div>
-            <div className={classes.main__content}>
-                <Header/>
-                {news.map((elem,index)=>{
-                    return(
-                        <NewItem data={elem} key={index} />
-                    )
-                })}
-            </div>
-        </div>
+        <Office>
+            {news.map((elem, index) => {
+                return (
+                    <NewItem data={elem} key={index}/>
+                )
+            })}
+        </Office>
+
     );
 }
 

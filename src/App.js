@@ -8,6 +8,7 @@ import Courses from "./routes/Courses/Courses";
 import ContextData from "./context/Data/ContextData";
 import ReducerData from "./context/Data/ReducerData";
 import StateData from "./context/Data/StateData";
+import Video from "./routes/Video/Video";
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
                 <Route path="/news" element={<News/>}/>
                 <Route path="/shop" element={<Shop/>}/>
                 <Route path="/courses" element={<Courses/>}/>
+                <Route path="/video" element={<Video/>}/>
+
+
             </Routes>
 
         </ContextData.Provider>
